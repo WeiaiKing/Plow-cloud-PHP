@@ -1,0 +1,366 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="./vendor/simple-line-icons/css/simple-line-icons.css">
+    <!-- <link rel="stylesheet" href="./vendor/font-awesome/css/fontawesome-all.min.css"> -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+    <!-- 这是框架Echarts的js包 -->
+    <script src="js/echarts.min.js"></script>
+    <!-- 这是index.html的CSS样式 -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/Base1.css">  -->
+</head>
+
+
+<body class="sidebar-fixed header-fixed" style="font-size: 18px;">
+<div class="page-wrapper">
+    <!-- 上边导航栏部分 -->
+    <nav class="navbar page-header" style="background: linear-gradient(to left,#7b4397,#2196f3">
+        <a class="navbar-brand" href="http://bbwuiot.com/" target="blank">
+            <img src="./imgs/捕获50.png" alt="logo">
+            <span style="color: #fff; font-size: 24px">北部湾大学物联网协会</span>
+        </a>
+        <h1 style="color: #f9d1d1">耕&nbsp&nbsp云</h1>
+        <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
+            <i class="fa fa-bars" style="font-size: 20px"></i>
+        </a>  
+    </nav>
+<!-- 右侧边栏部分 -->
+    <div class="main-container">
+    
+        <div class="sidebar">
+            <nav class="sidebar-nav" style="font-size: 16px;">
+                <ul class="nav">
+                    <li class="nav-title">智慧农业管理界面</li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="icon icon-speedometer"></i> 数据中心
+                        </a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="pests.html" class="nav-link ">
+                            <i class="icon icon-graph"></i> 病虫害 <i></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="historical-data.html" class="nav-link">
+                            <i class="icon icon-puzzle"></i> 历史数据
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="warn-control.html" class="nav-link">
+                            <i class="icon icon-grid"></i> 预警控制
+                        </a>
+                    </li>
+                    <li class="nav-title">更多</li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="#" class="nav-link nav-dropdown-toggle">
+                            <i class="icon icon-umbrella"></i> 个人中心 <i class="fa fa-caret-left"></i>
+                        </a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a href="login.html" class="nav-link">
+                                    <i class="icon icon-umbrella"></i> 登录
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="register.html" class="nav-link">
+                                    <i class="icon icon-umbrella"></i> 注册
+                                </a>
+                            </li>  
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+<!-- 中间内容部分 -->
+        <div class="content" style="background: #93c2dc;padding: 0 32px 32px 32px;">
+            <!-- 上边图片，温度设备显示部分 -->
+            <div style="margin-bottom: 40px;">
+                <ul class="bread">
+                    <li style="font-size: 27px;">耕云</li>
+                    <li style="color: #845d5d">/</li>
+                    <li style="color: #845d5d">数据中心</li>
+                </ul>
+            </div>
+            <div class="row mt-4">
+                <!-- 这是左边的显示要显示耕云图片 -->
+                <div class="col-md-6 ">
+                    <div class="card">
+                        <div class="card-header bg-light" >
+                            病虫害
+                        </div>
+                        <div class="card-body" style="width:85%;">
+                             <img src="imgs/123.png" style="margin: 8%;width: 100%">
+                             <p style="color: #fff">检查的结果：<!-- <input type="text" name="是否"> --></p>
+                             
+                            <!-- <canvas id="bar-chart" width="100%" height="50"></canvas> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 这是右边的温度还有设备显示 -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-light" >
+                           主温室
+                        </div>
+                        <!-- <div class="card-body" style="overflow: hidden;"> -->
+                        <div  style="margin: 0;padding: 0;">
+                        <!-- 显示测试数据 -->
+                            <div style="width:40%;float:left;margin: 4%;">
+                                <ul class="list-group" style="width: 100%;">
+                                  <li class="list-group-item d-flex justify-content-between align-items-center left ">
+                                    室内温度&nbsp&nbsp
+                                    <span class="badge badge-primary badge-pill right"><span id="my_tem_air">14</span>℃</span>
+                                  </li>
+                                  <li class="list-group-item d-flex justify-content-between align-items-center left">
+                                    室内湿度&nbsp&nbsp
+                                    <span class="badge badge-primary badge-pill"><span id="my_hum_air">14</span>%RH</span>
+                                  </li>
+                                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    土壤湿度&nbsp&nbsp
+                                    <span class="badge badge-primary badge-pill"><span id="my_hum_soil">14</span>%RH</span>
+                                  </li>
+                                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    土壤湿度&nbsp&nbsp
+                                    <span class="badge badge-primary badge-pill"><span id="xxx">14</span></span>
+                                  </li>
+                                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    CO2浓度
+                                    <span class="badge badge-primary badge-pill"><span id="my_co2">14</span>PPM</span>
+                                  </li>
+                                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    光照强度
+                                    <span class="badge badge-primary badge-pill"><span id="my_light">14</span>Lux</span>
+                                  </li>
+                                </ul>
+                            </div>
+                        <!-- 设备的显示 -->
+                            <div style="width:40%;float:right;margin:6%;">
+                                <table id="customers" style="width : 100%;">
+                                <tr style="font-weight: bold;" >
+                                  <th>设备名称</th>
+                                  <th>设备状态</th>
+                                </tr>
+                                <tr>
+                                <td style="color: #fff">排风扇</td>
+                                <td>
+                                    <input class="alert alert-info put" role="alert" name="put1" type="button" id="put1" value="启动中" onclick="chkinfo1(this.value);"/>
+                                   <script>
+                                    function chkinfo1(obj){
+                                     if( obj == '启动中' ){
+                                      document.getElementById('put1').value = '已关闭';
+                                     }
+                                     else{
+                                      document.getElementById('put1').value = '启动中';
+                                     }
+                                    }
+                                   </script>
+                                </td>
+                                </tr>
+                                <tr class="">
+                                <td style="color: #fff">补光灯</td>
+                                <td><input class="alert alert-info put" role="alert" name="put2" type="button" id="put2" value="启动中" onclick="chkinfo2(this.value);"/>
+                                   <script>
+                                    function chkinfo2(obj){
+                                     if( obj == '启动中' ){
+                                      document.getElementById('put2').value = '已关闭';
+                                     }
+                                     else{
+                                      document.getElementById('put2').value = '启动中';
+                                     }
+                                    }
+                                   </script></td>
+                                </tr>
+                                <tr>
+                                <td style="color: #fff">卷帘</td>
+                                <td><input class="alert alert-info put" role="alert" name="put3" type="button" id="put3" value="启动中" onclick="chkinfo3(this.value);"/>
+                                   <script>
+                                    function chkinfo3(obj){
+                                     if( obj == '启动中' ){
+                                      document.getElementById('put3').value = '已关闭';
+                                     }
+                                     else{
+                                      document.getElementById('put3').value = '启动中';
+                                     }
+                                    }
+                                   </script></td>
+                                </tr>
+                                <tr class="">
+                                <td style="color: #fff">水泵</td>
+                                <td><input class="alert alert-info put" role="alert" name="put4" type="button" id="put4" value="启动中" onclick="chkinfo4(this.value);"/>
+                                   <script>
+                                    function chkinfo4(obj){
+                                     if( obj == '启动中' ){
+                                      document.getElementById('put4').value = '已关闭';
+                                     }
+                                     else{
+                                      document.getElementById('put4').value = '启动中';
+                                     }
+                                    }
+                                   </script></td>
+                                </tr><tr class="">
+                                <td style="color: #fff">增温</td>
+                                <td><input class="alert alert-info put" role="alert" name="put1" type="button" id="put5" value="启动中" onclick="chkinfo5(this.value);"/>
+                                   <script>
+                                    function chkinfo5(obj){
+                                     if( obj == '启动中' ){
+                                      document.getElementById('put5').value = '已关闭';
+                                     }
+                                     else{
+                                      document.getElementById('put5').value = '启动中';
+                                     }
+                                    }
+                                   </script></td>
+                                </tr><tr class="">
+                                <td style="color: #fff">降温</td>
+                                <td><input class="alert alert-info put" role="alert" name="put6" type="button" id="put6" value="启动中" onclick="chkinfo6(this.value);"/>
+                                   <script>
+                                    function chkinfo6(obj){
+                                     if( obj == '启动中' ){
+                                      document.getElementById('put6').value = '已关闭';
+                                     }
+                                     else{
+                                      document.getElementById('put6').value = '启动中';
+                                     }
+                                    }
+                                   </script></td>
+                                </tr>
+                             </table>
+                            </div>
+                            
+                            <!-- <canvas id="line-chart" width="100%" height="50"></canvas> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  这里是六个对应的数据折现图 -->
+            <div class="row mt-8" >
+                <!-- 大气温度 -->
+                <div class="col-md-4" >
+                    <div class="card" style="background-color: #435c70;">
+                        <div class="card-header " style="background-color: #b77b76;color: #fff">
+                            室内温度
+                        </div>
+
+                        <div class="card-body">
+                            <div id="main_tem_air" style="width:100%;height:210%;"></div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 大气湿度 -->
+                <div class="col-md-4">
+                    <div class="card" style="background-color: #435c70;">
+                        <div class="card-header " style="background-color: #857fa7;color: #fff">
+                            室内湿度
+                        </div>
+
+                        <div class="card-body">
+                             <div id="main_hum_air" style="width:100%;height:210%;"></div>
+
+                            <!-- <canvas id="pie-chart" width="100%" height="50"></canvas> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 土壤湿度 -->
+                <div class="col-md-4">
+                    <div class="card" style="background-color: #435c70;">
+                        <div class="card-header " style="background-color: #8ab7bd;color: #fff">
+                            土壤湿度
+                        </div>
+
+                        <div class="card-body">
+                             <div id="main_hum_soil" style="width:100%;height:210%;"></div>
+
+                            <!-- <canvas id="pie-chart" width="100%" height="50"></canvas> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 二氧化碳浓度 -->
+                <div class="col-md-6 ">
+                    <div class="card" style="background-color: #435c70;">
+                        <div class="card-header " style="background-color: #6592b5;color: #fff">
+                            二氧化碳浓度
+                        </div>
+
+                        <div class="card-body">
+                             <div id="main_co2" style="width:100%;height:250%;"></div>
+
+                            <!-- <canvas id="pie-chart" width="100%" height="50"></canvas> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 光照强度 -->
+                <div class="col-md-6 " >
+                    <div class="card">
+                        <div class="card-header " style="background-color: #968c4e;color: #fff">
+                            光照强度
+                        </div>
+
+                        <div class="card-body">
+                            <!-- <canvas id="pie-chart" width="100%" height="50"></canvas> -->
+                            <div id="main_light" style="width:100%;height:250%;"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div>
+               <!--  <footer>
+                    <div class="w copyright">
+                    <p> 
+                        <a href="http://bbwuiot.com/" target="blank">关于我们</a>
+                        <span>|</span> 
+                        <a href="#">联系我们</a>
+                        <span>|</span> 
+                        <a href="#">关于我们</a>
+                        <span>|</span> 
+                        <a href="#">关于我们</a>
+                        <span>|</span> 
+                        <a href="#">关于我们</a> 
+                        <span>|</span> 
+                        <a href="#">English Site</a>
+                        <span>|</span> 
+                        <a href="#">Media & IR</a>
+                        <span>|</span> 
+
+                    </p>
+                    <div>
+                        <p>京公网安备 11000002000088号<span>|</span>京ICP证070359号<span>|</span>互联网药品信息服务资格证编号(京)-经营性-2014-0008<span>|</span>新出发京零 字第大120007号</p>
+                        <p>互联网出版许可证编号新出网证(京)字150号<span>|</span>出版物经营许可证<span>|</span>网络文化经营许可证京网文[2014]2148-348号<span>|</span>违法和不良信息举报电话：4006561155</p>
+                        <p>Copyright © 2004 - 2017  京东JD.com 版权所有|消费者维权热线：4006067733经营证照
+                        京东旗下网站：京东支付|京东云</p>
+                    </div>
+                    </div>
+                </footer> -->
+            </div> 
+        </div>   
+    </div>
+</div>
+<!-- <script src="./vendor/jquery/jquery.min.js"></script>
+<script src="./vendor/popper.js/popper.min.js"></script>
+<script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="./vendor/chart.js/chart.min.js"></script>
+<script src="./js/carbon.js"></script>
+<script src="./js/demo.js"></script>
+<script src="./js/get_data_zhudapeng.js"></script>
+<script src="js/get_data_index_biaoge_tem_air.js"></script>
+<script src="js/get_data_index_biaoge_hum_air.js"></script>
+<script src="js/get_data_index_biaoge_hum_soil.js"></script>
+<script src="js/get_data_index_biaoge_co2.js"></script>
+<script src="js/get_data_index_biaoge_light.js"></script> -->
+</body>
+</html>

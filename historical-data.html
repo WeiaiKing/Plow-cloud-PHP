@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>historical-data</title>
+    <link rel="stylesheet" href="./vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="./vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- 这是histotrical-data 的CSS样式 -->
+    <link rel="stylesheet" href="css/historical-data.css">
+    <!-- 这是框架Echarts的js包 -->
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+</head>
+<body class="sidebar-fixed header-fixed" style="font-size: 18px;background-color: #000;">
+<div class="page-wrapper">
+    <!-- 上边栏 -->
+    <nav class="navbar page-header" style="background: linear-gradient(to left,#7b4397,#2196f3">
+       <!--  <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
+            <i class="fa fa-bars"></i>
+        </a> -->
+       <a class="navbar-brand" href="http://bbwuiot.com/" target="blank">
+            <img src="./imgs/捕获50.png" alt="logo">
+            <span style="color: #fff; font-size: 24px">北部湾大学物联网协会</span>
+        </a>
+        <h1 style="font-size: 40px; margin-bottom: .5rem; font-weight: 700px; color: #f9d1d1">耕&nbsp&nbsp云</h1>
+        <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
+            <i class="fa fa-bars" style="font-size: 20px"></i>
+        </a>  
+    </nav>
+<!-- 右侧部分 -->
+    <div class="main-container">
+        <div class="sidebar">
+            <nav class="sidebar-nav" style="font-size: 16px;">
+            <!-- 左边栏 -->
+                <ul class="nav">
+                    <li class="nav-title">智慧农业管理界面</li>
+
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link ">
+                            <i class="icon icon-speedometer"></i> 数据中心
+                        </a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="pests.html" class="nav-link ">
+                            <i class="icon icon-graph"></i> 病虫害 <i></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="historical-data.html" class="nav-link active">
+                            <i class="icon icon-puzzle"></i> 历史数据
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="warn-control.html" class="nav-link">
+                            <i class="icon icon-grid"></i> 预警控制
+                        </a>
+                    </li>
+
+                    <li class="nav-title">更多</li>
+
+                    <li class="nav-item nav-dropdown">
+                        <a href="#" class="nav-link nav-dropdown-toggle">
+                            <i class="icon icon-umbrella"></i> 个人中心 <i class="fa fa-caret-left"></i>
+                        </a>
+
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a href="login.html" class="nav-link">
+                                    <i class="icon icon-umbrella"></i> 登录
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="register.html" class="nav-link">
+                                    <i class="icon icon-umbrella"></i> 注册
+                                </a>
+                            </li>  
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+<!-- 中间内容部分 -->
+      <div class="content" style="background: #87bdda;padding: 0 32px 32px 32px;">
+        <div>
+          <!-- 小小的导航栏部分 -->
+          <ul class="bread">
+              <li style="font-size: 27px;">耕云</li>
+              <li style="color: #845d5d">/</li>
+              <li style="color: #845d5d">历史数据</li>
+          </ul>
+       </div>
+       <div style="margin: 50px 0 0 0">
+         <!-- 对应数据的导航条部分 -->
+          <ul class="tab" >
+            <li class="tab-item active">室内温度<span>◆</span></li>
+            <li class="tab-item">室内湿度<span>◆</span></li>
+            <!-- <li class="tab-item">土壤温度<span>◆</span></li> -->
+            <li class="tab-item">土壤湿度<span>◆</span></li>
+            <li class="tab-item">二氧化碳浓度<span>◆</span></li>
+            <li class="tab-item">光照强度</li>
+          </ul>
+
+          <div class="products">
+            <!-- 对应的室内温度 -->
+            <div class="main selected" >
+              <div style="float: left;" class="divl">
+              <table class="table table-bordered">
+                <!-- <caption>历史数据</caption> -->
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>最高室内温度</th>
+                        <th>最低室内温度</th>
+                    </tr>
+                </thead>
+                <tbody id="mytb_tem_air">
+
+                </tbody>
+              </table>
+              <div>
+                <ul class="pagination">
+                  <li><a href="#">&laquo;下一页</a></li>
+                  <li><a href="#">&raquo;下一页</a></li>
+                  </ul>
+              </div>
+              </div>
+
+              <div style="float: right; margin: 50px 50px 0px 0px">
+               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                <div id="main_tem_air" style="width: 540px;height:340px;"></div>
+
+                <!-- 查询功能 -->
+                    <div id="chaxun" style="margin-left: -17px;float: right;">
+                      <!-- <i class="fa fa-sun" aria-hidden="true"></i> -->
+                      <label for="star">Star</label>
+                      <input type="text" id="firstname"  placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <label for="end">End</label>
+                      <input type="text"   placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <button type="submit" class="btn1 btn-default">查询</button>
+                    </div>
+             </div>
+            </div>
+            <!-- 对应的室内湿度 -->
+            <div class="main">
+              <div style="float: left;" class="divl">
+              <table class="table table-bordered">
+                <!-- <caption>历史数据</caption> -->
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>最高室内湿度</th>
+                        <th>最低室内湿度</th>
+                    </tr>
+                </thead>
+                <tbody id="mytb_hum_air">
+
+                </tbody>
+              </table>
+              <div>
+                <ul class="pagination">
+                  <li><a href="#">&laquo;下一页</a></li>
+                  <li><a href="#">&raquo;下一页</a></li>
+                  </ul>
+              </div>
+              </div>
+              <div style="float: right; margin: 50px 50px 0px 0px;">
+               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                <div id="main_hum_air" style="width: 540px;height:340px;"></div>
+
+                <div id="chaxun" style="margin-left: -17px;float: right;">
+                      <!-- <i class="fa fa-sun" aria-hidden="true"></i> -->
+                      <label for="star">Star</label>
+                      <input type="text" id="firstname"  placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <label for="end">End</label>
+                      <input type="text"   placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <button type="submit" class="btn1 btn-default">查询</button>
+                    </div>
+             </div>
+            </div>
+            <!-- 对应的土壤湿度 -->
+            <div class="main">
+              <div style="float: left;" class="divl">
+              <table class="table table-bordered">
+                <!-- <caption>历史数据</caption> -->
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>最高土壤湿度</th>
+                        <th>最低土壤湿度</th>
+                    </tr>
+                </thead>
+                <tbody id="mytb_hum_soil">
+
+                </tbody>
+              </table>
+                <div>
+                <ul class="pagination">
+                  <li><a href="#">&laquo;下一页</a></li>
+                  
+                  <li><a href="#">&raquo;下一页</a></li>
+                  </ul>
+              </div>
+              </div>
+              <div style="float: right; margin: 50px 50px 0px 0px;">
+               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                <div id="main_hum_soil" style="width: 540px;height:340px;"></div>
+                <div id="chaxun" style="margin-left: -17px;float: right;">
+                      <!-- <i class="fa fa-sun" aria-hidden="true"></i> -->
+                      <label for="star">Star</label>
+                      <input type="text" id="firstname"  placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <label for="end">End</label>
+                      <input type="text"   placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <button type="submit" class="btn1 btn-default">查询</button>
+                    </div>
+             </div>
+            </div>
+            <!-- 对应的二氧化碳浓度 -->
+            <div class="main">
+              <div style="float: left;" class="divl">
+              <table class="table table-bordered">
+                <!-- <caption>历史数据</caption> -->
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>最高CO2浓度</th>
+                        <th>最低CO2浓度</th>
+                    </tr>
+                </thead>
+                <tbody id="mytb_co2">
+                </tbody>
+              </table><div>
+                <ul class="pagination">
+                  <li><a href="#">&laquo;下一页</a></li>
+                  
+                  <li><a href="#">&raquo;下一页</a></li>
+                  </ul>
+              </div></div>
+              <div style="float: right; margin: 50px 50px 0px 0px;">
+               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                <div id="main_co2" style="width: 540px;height:340px;"></div>
+
+                <div id="chaxun" style="margin-left: -17px;float: right;">
+                      <!-- <i class="fa fa-sun" aria-hidden="true"></i> -->
+                      <label for="star">Star</label>
+                      <input type="text" id="firstname"  placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <label for="end">End</label>
+                      <input type="text"   placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <button type="submit" class="btn1 btn-default">查询</button>
+                    </div>
+             </div>
+            </div>
+            <!-- 对应的光照强度 -->
+            <div class="main">
+              <div style="float: left;" class="divl">
+              <table class="table table-bordered">
+                <!-- <caption>历史数据</caption> -->
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>最高光照强度</th>
+                        <th>最低光照强度</th>
+                    </tr>
+                </thead>
+                <tbody id="mytb_light">
+
+                </tbody>
+              </table><div>
+                <ul class="pagination">
+                  <li><a href="#">&laquo;下一页</a></li>
+                  
+                  <li><a href="#">&raquo;下一页</a></li>
+                  </ul>
+              </div></div>
+              <div style="float: right; margin: 50px 50px 0px 0px;">
+               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                <div id="main_light" style="width: 540px;height:340px;"></div>
+                <div id="chaxun" style="margin-left: -17px;float: right;">
+                      <!-- <i class="fa fa-sun" aria-hidden="true"></i> -->
+                      <label for="star">Star</label>
+                      <input type="text" id="firstname"  placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <label for="end">End</label>
+                      <input type="text"   placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <button type="submit" class="btn1 btn-default">查询</button>
+                    </div>
+             </div>
+            </div>
+          </div>
+        </div>
+    </div>
+ </div>
+<script>
+        $(function () {
+          
+          $(".tab-item").mouseenter(function () {
+            //两件事件
+            $(this).addClass("active").siblings().removeClass("active");
+            var idx = $(this).index();
+            $(".main").eq(idx).addClass("selected").siblings().removeClass("selected");
+          });
+          
+        });</script>
+<script src="./vendor/jquery/jquery.min.js"></script>
+<script src="./vendor/popper.js/popper.min.js"></script>
+<script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="./vendor/chart.js/chart.min.js"></script>
+<script src="./js/carbon.js"></script>
+<script src="./js/demo.js"></script>
+<script src="js/get_history_data_tem_air.js"></script>
+<script src="js/get_history_data_hum_air.js"></script>
+<script src="js/get_history_data_hum_soil.js"></script>
+<script src="js/get_history_data_co2.js"></script>
+<script src="js/get_history_data_light.js"></script>
+</body>
+</html>

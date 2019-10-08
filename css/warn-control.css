@@ -1,0 +1,106 @@
+<style type="text/css">
+        .content{
+            padding: 0 32px 32px 32px;
+        }
+        .form-group{
+            border-left: 1px solid #cdd4d8;
+            border-right: 1px solid #cdd4d8;
+            border-bottom: 1px solid #cdd4d8;
+            width: 450px;
+            height: 260px;
+            margin: 1%;
+            padding: 5px; 
+
+        }
+        .left{
+            float: left;
+            /*margin: 2%;*/
+        }
+        .right{
+            float: right;
+        }
+        .ra{
+          border-radius: 5px;
+          width: 100px;
+        }
+        .btn1{
+          background: #5cb85c;
+          color: #fff;
+          width: 65px;
+          height: 30px;
+          line-height: 20px;
+          font-size: 14px;
+          font-weight: bold;
+          text-decoration: none;
+          text-align: center;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+        .bread{
+            margin-left: -32px;
+            padding: 0px;
+            /*margin: 0px 0px 15px 0px;*/
+            /*line-height: 30px;*/
+            width: 100%;
+            height: 15px;
+            line-height: 15px;
+        }
+        .bread li{
+            border-radius: 5px;
+             background-color: #dcb6b624;
+            padding: 8px 7px;
+            list-style-type: none;
+            font-size: 23px;
+            font-weight: 700px;
+            float: left;
+        }
+        #WarnC {
+            margin-left: 6%;
+            color: #0e050b;
+            padding: 5px;
+        }
+        #WarnC input{
+            width: 20%;
+            color: #312020;
+            /*border--color-style: none;*/
+            text-align: center;
+            border-right-style: none;
+            border-left-style: none; 
+            border-top-style: none; 
+            border-bottom-style:solid;
+            background-color: #79aac3;
+            margin: 4px;
+        }
+        #WarnC1{
+            /*border-top: 1px solid #cdd4d8;*/
+            margin: 6%;
+        }
+        #WarnC1 input{
+            width: 70%;
+        }
+        #WarnC1 div{
+            margin: 6%;
+        }
+        .border1{
+            background-color: #abd0d836;
+            border-radius: 30px 8px 8px 8px;
+            border-top: 1px solid #cdd4d8;
+        }
+        .btn2 {
+          margin-left: 70%;
+          background: #829b9e;
+          color: #fff;
+          width: 65px;
+          height: 30px;
+          line-height: 20px;
+          font-size: 14px;
+          font-weight: bold;
+          text-decoration: none;
+          text-align: center;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+        /*.#WarnC1 label{
+            color: #ddd;
+        }*/
+    </style>
